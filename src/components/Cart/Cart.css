@@ -1,0 +1,7 @@
+.order_summary {
+  text-align: left;
+  margin-left: 15px;
+}
+.order__header {
+  border-bottom: 1px solid lightgray;
+}

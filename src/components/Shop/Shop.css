@@ -1,0 +1,16 @@
+.shop__container {
+  display: flex;
+}
+.product__container {
+  flex: 0.8;
+  margin-left: 20px;
+  margin-right: 5px;
+  border-right: 1px solid lightgray;
+}
+.cart__container {
+  flex: 0.2;
+}
+.cart__container__label {
+  text-align: center;
+  margin: 0 auto;
+}

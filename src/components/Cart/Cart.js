@@ -1,5 +1,9 @@
 import React from 'react';
 import './Cart.css';
+// import Badge from '@mui/material/Badge';
+// import { styled } from '@mui/material/styles';
+// import IconButton from '@mui/material/IconButton';
+// import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const Cart = (props) => {
     const cart = props.cart;
@@ -30,6 +34,29 @@ const Cart = (props) => {
     }
 
 
+//     const StyledBadge = styled(Badge)(({ theme }) => ({
+//   '& .MuiBadge-badge': {
+//     right: "-3px",
+//     top: "13px",
+//     border: `2px solid ${theme.palette.background.paper}`,
+//     padding: '0 4px',
+//   },
+// }));
+
+// const CartBox = () =>{
+//     return (
+//      <div className="header__bottom">
+//                 <input type="text" />
+//                 <IconButton aria-label="cart">
+//                     <StyledBadge badgeContent={cart.length} color="secondary">
+//                     <ShoppingCartIcon />
+//                     </StyledBadge>
+//                 </IconButton>
+//             </div>
+// )}
+
+
+
 
     return (
         <div className="cart__container">
@@ -37,13 +64,27 @@ const Cart = (props) => {
                 <h3>Order Summary</h3>
             </div>
             <div className="order_summary">
-                <p><b>Items Ordered: </b>{cart.length}</p>
-                <p><b>Shipping Cost: $</b>{shipping}</p>
-                <p><b>Total tax: $</b>{tax}</p>
-                <p><b>Product Price: </b>${formattedAmount(total)}</p>
-                <p><b>Total Price: </b>${formattedAmount(grandTotal)}</p>
+                <div className="order__info">
+                   <h4>Items Ordered: </h4>
+                   <p>{cart.length}</p>
+                </div>
+                <div className="order__info">
+                   <h4>Shipping Cost: </h4>
+                   <p>$ {shipping}</p>
+                </div>
+                <div className="order__info">
+                   <h4>Total tax: </h4>
+                   <p>$ {tax}</p>
+                </div>
+                <div className="order__info">
+                   <h4>Product Price: </h4>
+                   <p>${formattedAmount(total)}</p>
+                </div>
+                <div className="order__info total__price">
+                   <h4>Total Price: </h4>
+                   <p>${formattedAmount(grandTotal)}</p>
+                </div>
             </div>
-
 
         </div>
     );

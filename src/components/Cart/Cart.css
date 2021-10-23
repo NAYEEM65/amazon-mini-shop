@@ -5,3 +5,20 @@
 .order__header {
   border-bottom: 1px solid lightgray;
 }
+.order__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.order__info > p {
+  margin-right: 100px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.order__info > h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.total__price {
+  border-top: 1px solid lightgray;
+}
